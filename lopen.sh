@@ -13,13 +13,15 @@ ftype="${1##*.}"
 
 input=$1
 function fallback {
-    firefox --new-tab $input
+    #firefox --new-tab $input
+    surf $input
 }
 function img {
     feh $input
 }
 function txt {
-    urxvt -e emacs -nw $input
+    curl $input -o /tmp/temp.txt
+    urxvt -e emacs -nw /tmp/temp.txt
 }
 function audio {
     mpv --force-window $input
@@ -44,6 +46,9 @@ case "$ftype" in # begin filetype switch
     *) case "$host" in # begin host switch
 	   youtube.com|www.youtube.com)
 	       video
+	       ;;
+	   i.ufufu.moe)
+	       img
 	       ;;
 	   *)
 	       fallback

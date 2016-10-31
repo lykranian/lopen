@@ -44,10 +44,10 @@ case "$ftype" in # begin filetype switch
 	video
 	;;
     *) case "$host" in # begin host switch
-	   youtube.com|www.youtube.com)
+	   youtube.com|www.youtube.com|youtu.be|m.youtube.com)
 	       video
 	       ;;
-	   i.ufufu.moe)
+	   i.ufufu.moe|i.givemeyour.pw)
 	       img
 	       ;;
 	   *)

@@ -17,6 +17,7 @@ function fallback {
     surf $input
 }
 function img {
+    notify-send "opening image" -t 500
     feh $input
 }
 function txt {

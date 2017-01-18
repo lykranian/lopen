@@ -32,7 +32,7 @@ function video {
 }
 
 case "$ftype" in # begin filetype switch
-    png|jpg|jpeg)
+    png|jpg|jpeg|JPG)
 	img
 	;;
     txt)
